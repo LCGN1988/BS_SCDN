@@ -12,23 +12,6 @@ sdk = Sdk({
     "timeout": 30,
 })
 
-# req_api = "web.domain.list.short"
-# query_data = {
-#    # "per_page": 1000,
-#    # "page": 2,
-#    "domain": "770110.cc"
-# }
-# raw, jsonData, err = sdk.get(req_api, query = query_data)
-
-req_api = "Web.Domain.add.batch"
-post_data = {
-    "domain": [
-        "fdupay.com", "*.fdupay.com",
-        "fdupayment.com", "*.fdupayment.com"
-    ]
-}
-raw, jsonData, err = sdk.post(req_api, postData = post_data)
-
 # req_api = "web.domain.set.get"
 # query_data = {
 #     "domain_id": "438459",
@@ -63,10 +46,3 @@ raw, jsonData, err = sdk.post(req_api, postData = post_data)
 #     ])
 # }
 # raw, jsonData, err = sdk.get(req_api, query = query_data)
-
-print(jsonData)
-print(err)
-
-
-# new_domain_list = list(jsonData.get('data').get('list').keys())
-# print(new_domain_list)
